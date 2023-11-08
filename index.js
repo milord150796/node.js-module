@@ -1,18 +1,9 @@
-'use strict';
+import { a1Value } from "./module-a/a1.js";
+import { a2Value } from "./module-a/a2.cjs";
+import { b1Value } from "./module-b/b1.js";
+import { b2Value } from "./module-b/b2.mjs";
 
-const counter = require('./counter');
-
-counter.increment();
-console.log(`Counter value: ${counter.value()}`);
-
-require('./secondary.js');
-
-counter.increment();
-console.log(`Counter value: ${counter.value()}`);
-
-// 2 index.js
-console.log('index.starting');
-const a = require('./a.js');
-const b = require('./b.js');
-console.log('in index, a.done=%j,b.done=%j', a.done, b.done);
-
+console.log(a1Value);
+console.log(a2Value);
+console.log(b1Value);
+console.log(b2Value);
